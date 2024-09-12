@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* 
+{
+  box-sizing: border-box;
+}
+body
+{
+  background-color: bisque;
+}
+
+.container 
+{
+  background-color:lightblue;
+  padding: 20px;
+  border-radius: 5px;
+  
+}
+
+.col1 
+{
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col2 
+{
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+input[type=text], select, textarea,input[type=email],input[type=file],input[type=number],input[type=radio]
+{
+  width: 100%;
+  border-radius: 3px;
+  padding: 10px;
+  border: 1px solid black;
+  resize: vertical;
+}
+
+button 
+{
+  background-color: green;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  margin-top: 10px;
+}
+
+.row:after 
+{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .col1, .col2, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body>
+  
+
+<h2>Responsive Form</h2>
+<p>Resize the browser window to see the effect. When the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other.</p>
+
+<div class="container">
+  <form>
+    <div class="row">
+      <div class="col1">
+        <label for="fname">First Name:</label>
+      </div>
+      <div class="col2">
+        <input type="text" id="fname" name="firstname" placeholder="Your Firstname">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col1">
+        <label for="lname">Last Name:</label>
+      </div>
+      <div class="col2">
+        <input type="text" id="lname" name="lastname" placeholder="Your lastname">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col1">
+        <label for="country">Country:</label>
+      </div>
+      <div class="col2">
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="usa">USA</option>
+          <option value="india">India</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col1">
+        <label for="subject">Subject:</label>
+      </div>
+      <div class="col2">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col1">
+        <label for="email">Email:</label>
+      </div>
+      <div class="col2">
+        <input type="email" id="email" name="email" placeholder="Enter Email">
+      </div>
+    </div>
+
+    
+    <div class="row">
+      <div class="col1">
+        <label for="phone">Phone No:</label>
+      </div>
+      <div class="col2">
+        <input type="number" id="phone" name="phone" placeholder="9987564334">        
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col1">
+        <label for="myfile">Upload File:</label>
+      </div>
+      <div class="col2">
+        <input type="file" id="myfile" name="myfile" placeholder="Upload File" style="background-color: white;">
+      </div>
+    </div>
+   
+   
+    <div class="row">
+      <script>
+        function myButt(){
+          alert("Submitted Successfully..")
+        }
+      </script>
+   
+      <button type="button" onclick="myButt()">Submit</button>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
